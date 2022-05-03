@@ -1,16 +1,421 @@
+text = {
+    ["No waypoint has been set!"] = "No waypoint has been set!",
+    ["Info copied"] = "Info copied",
+    ["Enable Ghost Rider first!"] = "Enable Ghost Rider first!",
+    ["Outfit updated!"] = "Outfit updated!",
+    ["Please enter name!"] = "Please enter name!",
+    ["Invalid Name!"] = "Invalid Name!",
+    ["Invalid Name, must be at least 3 characters!"] = "Invalid Name, must be at least 3 characters!",
+    ["Name already exists, click again to overwrite outfit"] = "Name already exists, click again to overwrite outfit",
+    ['Position copied!'] = 'Position copied!',
+    ["Clearing area..."] = "Clearing area...",
+    ["Clear area finished!"] = "Clear area finished!",
+    ["Loadout saved"] = "Loadout saved",
+    ["Outfits Reloaded!"] = "Outfits Reloaded!",
+    ["This outfit is for male!"] = "This outfit is for male!",
+    ["This outfit is for female!"] = "This outfit is for female!",
+    ["Name already exists"] = "Name already exists",
+    ["Chat spam detected from"] = "Chat spam detected from",
+    ["Invalid Model"] = "Invalid Model",
+    ["Loading Police Mode, DON'T TOGGLE OFF YET!!!, please wait..."] = "Loading Police Mode, DON'T TOGGLE OFF YET!!!, please wait...",
+    ["Police Mode Loaded! Have Fun! :)"] = "Police Mode Loaded! Have Fun! :)",
+    ["PRESS G TO DETONATE"] = "PRESS G TO DETONATE",
+    ["Failed to enter vehicle!"] = "Failed to enter vehicle!",
+    ["Hold up! You gonna break the sound barrier"] = "Hold up! You gonna break the sound barrier",
+    ["Make sure that chat logger is on!"] = "Make sure that chat logger is on!",
+    ["Black Hole"] = "Black Hole",
+    ["Bring To Self"] = "Bring To Self",
+    ["Attach To Self"] = "Attach To Self",
+    ["Multiplier:"] = "Multiplier:",
+    ["Force:"] = "Force:",
+    ["Low"] = "Low",
+    ["Medium"] = "Medium",
+    ["High"] = "High",
+    ["Suck In"] = "Suck In",
+    ["Enable Black Hole"] = "Enable Black Hole",
+    ["Weapon Manager"] = "Weapon Manager",
+    ["Load On Startup"] = "Load On Startup",
+    ["Save Loadout To File"] = "Save Loadout To File",
+    ["Saved Outfits"] = "Saved Outfits",
+    ["[Enter Name Here]"] = "[Enter Name Here]",
+    ["Save Current Outfit"] = "Save Current Outfit",
+    ["[Search Outfits]"] = "[Search Outfits]",
+    ["Apply"] = "Apply",
+    ["Rename"] = "Rename",
+    ["Overwrite"] = "Overwrite",
+    ["Delete"] = "Delete",
+    ["No results found!"] = "No results found!",
+    ["Open Outfits Folder"] = "Open Outfits Folder",
+    ["Refresh Outfits"] = "Refresh Outfits",
+    ["Outfit Editor"] = "Outfit Editor",
+    ["Skip Disappearing Components"] = "Skip Disappearing Components",
+    ["Clear Props"] = "Clear Props",
+    ["Clear Area"] = "Clear Area",
+    ["Vehicles"] = "Vehicles",
+    ["Ojects"] = "Ojects",
+    ["Peds"] = "Peds",
+    ["Block Features"] = "Block Features",
+    ["Block Orbital Room"] = "Block Orbital Room",
+    ["Block All LSC"] = "Block All LSC",
+    ["Block All Ammu-Nation"] = "Block All Ammu-Nation",
+    ["Block Casino"] = "Block Casino",
+    ["Block Eclipse Towers"] = "Block Eclipse Towers",
+    ["Windmill Main LSC"] = "Windmill Main LSC",
+    ["Block Strip Club"] = "Block Strip Club",
+    ["Chat Features"] = "Chat Features",
+    ["IMPORTANT!!!"] ="IMPORTANT!!!",
+    ["Enable Chat Logger to use other features"] = "Enable Chat Logger to use other features",
+    ["Disable Chat"] = "Disable Chat",
+    ["Remove Russians"] = "Remove Russians",
+    ["Reaction"] = "Reaction",
+    ["Kick"] = "Kick",
+    ["Crash"] = "Crash",
+    ["Chat Spam Detection"] = "Chat Spam Detection",
+    ["Notify"] = "Notify",
+    ["Kick + Notify"] = "Kick + Notify",
+    ["Crash + Notify"] = "Crash + Notify",
+    ["Punish Money Beggers"] = "Punish Money Beggers",
+    ["Explode"] = "Explode",
+    ["Freeze"] = "Freeze",
+    ["Send To Island"] = "Send To Island",
+    ["Infinite Apartment Invite"] = "Infinite Apartment Invite",
+    ["Transaction Error"] = "Transaction Error",
+    ["Chat Commands:"] = "Chat Commands:",
+    ["All Players"] = "All Players",
+    ["Friends Only"] = "Friends Only",
+    ["Don't Affect Friends"] = "Don't Affect Friends",
+    ["Send Available Lua Commands"] = "Send Available Lua Commands",
+    ["Send Available Cherax Commands"] = "Send Available Cherax Commands",
+    ["Settings"] = "Settings",
+    ["Open Folder"] = "Open Folder",
+    ["General"] = "General",
+    ["Protections"] = "Protections",
+    ["Vehicle Blacklist"] = "Vehicle Blacklist",
+    ['Reset All'] = 'Reset All',
+    ["Blacklisted"] = "Blacklisted",
+    ['[Search Vehicles]'] = '[Search Vehicles]',
+    ['Not Allowed'] = 'Not Allowed',
+    ['Allowed'] = 'Allowed',
+    ["Hotkeys"] = "Hotkeys",
+    ['Reset All Hotkeys'] = 'Reset All Hotkeys',
+    ['[Search Functions]'] = '[Search Functions]',
+    ["Register Hotkey"] = "Register Hotkey",
+    ["Delete Hotkey"] = "Delete Hotkey",
+    ["Hotkey"] = "Hotkey",
+    ["Hotkeys"] = "Hotkeys",
+    ["Custom Bounty"] = "Custom Bounty",
+    ["Fuck Up Player"] = "Fuck Up Player",
+    ["Block Pussive Mode"] = "Block Pussive Mode",
+    ["Gas Player"] = "Gas Player",
+    ["Spawn Puma"] = "Spawn Puma",
+    ["Ragdoll"] = "Ragdoll",
+    ["Fire Ass"] = "Fire Ass",
+    ["Send Griefer Lester"] = "Send Griefer Lester",
+    ["Send Lester Attacker"] = "Send Lester Attacker",
+    ["Peds Attack Player"] = "Peds Attack Player",
+    ["Infinite Apartment Invite"] = "Infinite Apartment Invite",
+    ["Force Cutscene"] = "Force Cutscene",
+    ["Transaction Error"] = "Transaction Error",
+    ["Crush Player"] = "Crush Player",
+    ["Teleport Everything To Player"] = "Teleport Everything To Player",
+    ["Trap Player"] = "Trap Player",
+    ["Send Terrorist"] = "Send Terrorist",
+    ["Jets Amount"] = "Jets Amount",
+    ["Send Jet Lesters"] = "Send Jet Lesters",
+    ["Electrocute"] = "Electrocute",
+    ["Claim Session Bounty"] = "Claim Session Bounty",
+    ["Auto Heal"] = "Auto Heal",
+    ["Hard Vehicle Sex"] = "Hard Vehicle Sex",
+    ["Lester Takes The Wheel"] = "Lester Takes The Wheel",
+    ["Lock Inside Vehicle"] = "Lock Inside Vehicle",
+    ["Rotate"] = "Rotate",
+    ["Flip"] = "Flip",
+    ["Boost Backwards"] = "Boost Backwards",
+    ["Burst Tires"] = "Burst Tires",
+    ["Explode Vehicle"] = "Explode Vehicle",
+    ["Lag Vehicle Boost Refill"] = "Lag Vehicle Boost Refill",
+    ["Fast Vehicle Boost Refill"] = "Fast Vehicle Boost Refill",
+    ["Enable Vehicle God Mode"] = "Enable Vehicle God Mode",
+    ["Disable Vehicle God Mode"] = "Disable Vehicle God Mode",
+    ["Launch Up"] = "Launch Up",
+    ["Launch Down"] = "Launch Down",
+    ["Remove MK2 Rockets"] = "Remove MK2 Rockets",
+    ["Vehicle Name"] = "Vehicle Name",
+    ["Spawn Vehicle"] = "Spawn Vehicle",
+    ["Speed"] = "Speed",
+    ["Limit Max Speed"] = "Limit Max Speed",
+    ["Need For Speed"] = "Need For Speed",
+    ["Horn Boosting"] = "Horn Boosting",
+    ["Teleport Vehicle To Waypoint"] = "Teleport Vehicle To Waypoint",
+    ["Teleport Vehicle To Prison"] = "Teleport Vehicle To Prison",
+    ["Teleport Vehicle To Mount Chiliad"] = "Teleport Vehicle To Mount Chiliad",
+    ["Teleport Vehicle To Ocean"] = "Teleport Vehicle To Ocean",
+    ["Teleport Vehicle To Kill Zone"] = "Teleport Vehicle To Kill Zone",
+    ["Teleport Vehicle Under Maze Bank"] = "Teleport Vehicle Under Maze Bank",
+    ["Teleport Vehicle To Haven"] = "Teleport Vehicle To Haven",
+    ["Show Invisible Player"] = "Show Invisible Player",
+    ["Send IP"] = "Send IP",
+    ["Copy Player Info"] = "Copy Player Info",
+    ["Clear Ped"] = "Clear Ped",
+    ["Respawn At Death Coords"] = "Respawn At Death Coords",
+    ["Walk On Water"] = "Walk On Water",
+    ["Smash Ability"] = "Smash Ability",
+    ["Hard Impact"] = "Hard Impact",
+    ["Local Visibility"] = "Local Visibility",
+    ["No Clip+"] = "No Clip+",
+    ["Demi God Mode"] = "Demi God Mode",
+    ["Fast EWO"] = "Fast EWO",
+    ["Sky Dive"] = "Sky Dive",
+    ["Force Current Outfit"] = "Force Current Outfit",
+    ["Anonymous Bounty"] = "Anonymous Bounty",
+    ["Bounty Amount"] = "Bounty Amount",
+    ["Set Bounty All"] = "Set Bounty All",
+    ["Send All To Mission"] = "Send All To Mission",
+    ["Infinite Apartment Invite"] = "Infinite Apartment Invite",
+    ["Trap All"] = "Trap All",
+    ["CEO Ban All"] = "CEO Ban All",
+    ["CEO Kick All"] = "CEO Kick All",
+    ["Give All Weapons"] = "Give All Weapons",
+    ["Kick Barcodes"] = "Kick Barcodes",
+    ["Show Invisible Players"] = "Show Invisible Players",
+    ["Transaction Error"] = "Transaction Error",
+    ["Block Pussive Mode"] = "Block Pussive Mode",
+    ["Bribe Authorities All"] = "Bribe Authorities All",
+    ["Off Radar All"] = "Off Radar All",
+    ["Vehicle Blacklist"] = "Vehicle Blacklist",
+    ["Load Weapons"] = "Load Weapons",
+    ["Airstrike Gun"] = "Airstrike Gun",
+    ["Pick Up Gun"] = "Pick Up Gun",
+    ["Acceleration Gun"] = "Acceleration Gun",
+    ["Drive It Gun"] = "Drive It Gun",
+    ["Scale"] = "Scale",
+    ["FlameThrower"] = "FlameThrower",
+    ["Xmass Tree Gun"] = "Xmass Tree Gun",
+    ["Kick Gun"] = "Kick Gun",
+    ["Modify Top Speed"] = "Modify Top Speed",
+    ["Vehicle Cam Fly"] = "Vehicle Cam Fly",
+    ["Slam Vehicle"] = "Slam Vehicle",
+    ["Super Handbrake"] = "Super Handbrake",
+    ["Licence Plate Speedo"] = "Licence Plate Speedo",
+    ["Cherax Licence Plate"] = "Cherax Licence Plate",
+    ["Auto Flip"] = "Auto Flip",
+    ["Anti Lock On"] = "Anti Lock On",
+    ["Vehicle Rapid Fire"] = "Vehicle Rapid Fire",
+    ["Infinite Rocket Boost"] = "Infinite Rocket Boost",
+    ["Insta Exit Vehicle"] = "Insta Exit Vehicle",
+    ["Barrel Roll L"] = "Barrel Roll L",
+    ["Barrel Roll R"] = "Barrel Roll R",
+    ["Backflip"] = "Backflip",
+    ["Frontflip"] = "Frontflip",
+    ["Disable Vehicles Spawn"] = "Disable Vehicles Spawn",
+    ["Disable Peds Spawn"] = "Disable Peds Spawn",
+    ["Drive Personal Vehicle"] = "Drive Personal Vehicle",
+    ["TP Personal Vehicle To Self"] = "TP Personal Vehicle To Self",
+    ["Drive Last Vehicle"] = "Drive Last Vehicle",
+    ["TP To Last Vehicle"] = "TP To Last Vehicle",
+    ["Copy Position"] = "Copy Position",
+    ["Kills"] = "Kills",
+    ["Deaths"] = "Deaths",
+    ["Set KD"] = "Set KD",
+    ["Delete Cameras"] = "Delete Cameras",
+    ["Launch Up Nearby Vehicles"] = "Launch Up Nearby Vehicles",
+    ["Launch Up Nearby Peds"] = "Launch Up Nearby Peds",
+    ["Repair Nearby Vehicles"] = "Repair Nearby Vehicles",
+    ["God Mode Nearby Vehicles"] = "God Mode Nearby Vehicles",
+    ["Max Acceleration"] = "Max Acceleration",
+    ["Horn Havoc"] = "Horn Havoc",
+    ["Vehicles Explode On Impact"] = "Vehicles Explode On Impact",
+    ["Hot Traffic"] = "Hot Traffic",
+    ["Bouncy Vehicles"] = "Bouncy Vehicles",
+    ["Beyblades"] = "Beyblades",
+    ["Now This Is Some Tire Poppin'"] = "Now This Is Some Tire Poppin'",
+    ["Spammy Doors"] = "Spammy Doors",
+    ["Airstrike At Waypoint"] = "Airstrike At Waypoint",
+    ["Ghost Rider"] = "Ghost Rider",
+    ["Enter Bike"] = "Enter Bike",
+    ["Police Mode"] = "Police Mode",
+    ["Show Weapon Manager"] = "Show Weapon Manager",
+    ["Spawn"] = "Spawn",
+    ["Spawn Max Upgraded"] = "Spawn Max Upgraded",
+    ["Spawn In God Mode"] = "Spawn In God Mode",
+    ["Close Window"] = "Close Window",
+    ["Lobby Info"] = "Lobby Info",
+    ["Host"] = "Host",
+    ["Modders"] = "Modders",
+    ["Script Host"] = "Script Host",
+    ["Players"] = "Players",
+    ["Friends"] = "Friends",
+    ["Ear Rape"] = "Ear Rape",
+    ["Chat Singing:"] = "Chat Singing:",
+    ["Play"] = "Play",
+    ["Stop"] = "Stop",
+    ["Remove Spambots"] = "Remove Spambots",
+    ["Super Punch"] = "Super Punch",
+    ["Push Gun"] = "Push Gun",
+    ["Weapon Rain"] = "Weapon Rain",
+    ["Heist Helper"] = "Heist Helper",
+    ["Helper"] = "Helper",
+    ["Casino Presets"] = "Casino Presets",
+    ["Cayo Presets"] = "Cayo Presets",
+    ["Silent (Hard)"] = "Silent (Hard)",
+    ["The Big Con (Hard)"] = "The Big Con (Hard)",
+    ["Aggressive (Hard)"] = "Aggressive (Hard)",
+    ["Silent (Normal)"] = "Silent (Normal)",
+    ["The Big Con (Normal)"] = "The Big Con (Normal)",
+    ["Aggressive (Normal)"] = "Aggressive (Normal)",
+    ["100% Cut All Players"] = "100% Cut All Players",
+    ["Casino $2.8 M"] = "Casino $2.8 M",
+    ["$2.5 M (Solo)"] = "$2.5 M (Solo)",
+    ["$2.5 M (2 Players)"] = "$2.5 M (2 Players)",
+    ["$2.5 M (3 Players)"] = "$2.5 M (3 Players)",
+    ["$2.5 M (4 Players)"] = "$2.5 M (4 Players)",
+    ["Teleport To"] = "Teleport To",
+    ["Kill Enemies"] = "Kill Enemies",
+    ["Shot Enemies"] = "Shot Enemies",
+    ["Delete Enemies"] = "Delete Enemies",
+    ["Teleport To"] = "Teleport To",
+    ["Outsite"] = "Outsite",
+    ["Main Entrance"] = "Main Entrance",
+    ["Security Tunnel"] = "Security Tunnel",
+    ["Drainage Tunnel"] = "Drainage Tunnel",
+    ["Side Entrance"] = "Side Entrance",
+    ["Inside"] = "Inside",
+    ["Planning Boards"] = "Planning Boards",
+    ["Garage Exit"] = "Garage Exit",
+    ["Kostatka Board"] = "Kostatka Board",
+    ["Casino Teleports"] = "Casino Teleports",
+    ["Cayo Teleports"] = "Cayo Teleports",
+    ["Exclude Friends"] = "Exclude Friends",
+    ["Block Transaction Error"] = "Block Transaction Error",
+    ["Show Welcome Screen"] = "Show Welcome Screen",
+    ["Sound Effects"] = "Sound Effects",
+    ["Godmode Attackers"] = "Godmode Attackers",
+    ["Check For Updates"] = "Check For Updates",
+    ["Auto Update"] = "Auto Update",
+    ["Show Hotkeys"] = "Show Hotkeys",
+    ["Auto Load Lua (form Autoload | Max 1!)"] = "Auto Load Lua (form Autoload | Max 1!)",
+    ["Allow Weapons While No Clip"] = "Allow Weapons While No Clip",
+    ["Show Host"] = "Show Host",
+    ["Show Modder Count"] = "Show Modder Count",
+    ["Show Script Host"] = "Show Script Host",
+    ["Show Friend Count"] = "Show Friend Count",
+    ["Spawn Kuruma"] = "Spawn Kuruma",
+    ["Spawn Bati"] = "Spawn Bati",
+    ["Spawn Oppressor"] = "Spawn Oppressor",
+    ["Compound Entrance"] = "Compound Entrance",
+    ["Compound Exit"] = "Compound Exit",
+    ["Primary Loot"] = "Primary Loot",
+    ["Secondary Loot (1)"] = "Secondary Loot (1)",
+    ["Secondary Loot (2)"] = "Secondary Loot (2)",
+    ["Ocean"] = "Ocean",
+    ["Teleport Forward"] ="Teleport Forward",
+    ["Prep"] = "Prep",
+    ["Loot"] = "Loot",
+    ["Heist"] = "Heist",
+    ["Quick Messages"] = "Quick Messages",
+    ["Send To Selected Player"] = "Send To Selected Player",
+    ["Clear Wanted For All"] = "Clear Wanted For All",
+    ["Reset Casino Heist"] = "Reset Casino Heist",
+    ["Reset Cayo Perico Heist"] = "Reset Cayo Perico Heist",
+    ["Staff Lobby"] = "Staff Lobby",
+    ["Bonus Room"] = "Bonus Room",
+    ["Inside Vault"] = "Inside Vault",
+    ["Outsite Vault"] = "Outsite Vault",
+}
 
 table_settings = {
---[[1]] {"exclude_friends", true, "Exclude Friends"},
---[[2]] {"prot_transaction_error", true, "Block Transaction Error"},
---[[3]] {"welcome_screen", true, "Show Welcome Screen"},
---[[4]] {"sound_effects", true, "Sound Effects"},
---[[5]] {"godmode_attackers", true, "Godmode Attackers"},
---[[6]] {"check_for_updates", true, "Check For Updates"},
---[[7]] {"auto_update", true, "Auto Update"},
---[[8]] {"show_hotkeys", true, "Show Hotkeys"},
---[[9]] {"auto_load", false, "Auto Load Lua (form Autoload | Max 1!)"},
---[[10]]{"noclip_weaons", true, "Allow Weapons While No Clip"},
+--[[1]] {"exclude_friends", true, text["Exclude Friends"]},
+--[[2]] {"prot_transaction_error", true, text["Block Transaction Error"]},
+--[[3]] {"welcome_screen", true, text["Show Welcome Screen"]},
+--[[4]] {"sound_effects", true, text["Sound Effects"]},
+--[[5]] {"godmode_attackers", true, text["Godmode Attackers"]},
+--[[6]] {"check_for_updates", true, text["Check For Updates"]},
+--[[7]] {"auto_update", true, text["Auto Update"]},
+--[[8]] {"show_hotkeys", true, text["Show Hotkeys"]},
+--[[9]] {"auto_load", false, text["Auto Load Lua (form Autoload | Max 1!)"]},
+--[[10]]{"noclip_weaons", true, text["Allow Weapons While No Clip"]},
+--[[11]]{"show_host", true, text["Show Host"]},
+--[[12]]{"show_modder_count", true, text["Show Modder Count"]},
+--[[13]]{"show_script_host", true, text["Show Script Host"]},
+--[[14]]{"show_friend_count", true, text["Show Friend Count"]},
 }
+
+rickroll = [[
+We're no strangers to love
+You know the rules and so do I
+A full commitment's what I'm thinking of
+You wouldn't get this from any other guy
+
+I just wanna tell you how I'm feeling
+Gotta make you understand
+
+Never gonna give you up
+Never gonna let you down
+Never gonna run around and desert you
+Never gonna make you cry
+Never gonna say goodbye
+Never gonna tell a lie and hurt you
+
+We've known each other for so long
+Your heart's been aching, but
+You're too shy to say it
+Inside, we both know what's been going on
+We know the game and we're gonna play it
+
+And if you ask me how I'm feeling
+Don't tell me you're too blind to see
+
+Never gonna give you up
+Never gonna let you down
+Never gonna run around and desert you
+Never gonna make you cry
+Never gonna say goodbye
+Never gonna tell a lie and hurt you
+
+Never gonna give you up
+Never gonna let you down
+Never gonna run around and desert you
+Never gonna make you cry
+Never gonna say goodbye
+Never gonna tell a lie and hurt you
+
+(Ooh, give you up)
+(Ooh, give you up)
+Never gonna give, never gonna give
+(Give you up)
+Never gonna give, never gonna give
+(Give you up)
+
+We've known each other for so long
+Your heart's been aching, but
+You're too shy to say it
+Inside, we both know what's been going on
+We know the game and we're gonna play it
+
+I just wanna tell you how I'm feeling
+Gotta make you understand
+
+Never gonna give you up
+Never gonna let you down
+Never gonna run around and desert you
+Never gonna make you cry
+Never gonna say goodbye
+Never gonna tell a lie and hurt you
+
+Never gonna give you up
+Never gonna let you down
+Never gonna run around and desert you
+Never gonna make you cry
+Never gonna say goodbye
+Never gonna tell a lie and hurt you
+
+Never gonna give you up
+Never gonna let you down
+Never gonna run around and desert you
+Never gonna make you cry
+Never gonna say goodbye
+Never gonna tell a lie and hurt you
+]]
 
 FriendsOnly = false
 IgnoreFriends = false
@@ -73,6 +478,16 @@ instastop = false
 overwrite = false
 slamveh = false
 veh_mods = false
+maxupgrade = false
+ingod = false
+playsong = false
+spunch = false
+push_gun = false
+delete_enemies = false
+kill_enemies = false
+shot_enemies = false
+sendtosel = false
+removespambot = false
 
 jetLester = {}
 electrocute = {}
@@ -80,6 +495,8 @@ autoheal = {}
 nfs = {}
 hornboost = {}
 show_invisible = {}
+earrape = {}
+weaporain = {}
 
 for i = 0, 31 do
  jetLester[i] = false
@@ -88,6 +505,8 @@ for i = 0, 31 do
  nfs[i] = false
  hornboost[i] = false
  show_invisible[i] = false
+ earrape[i] = false
+ weaporain[i] =false
 end
 
 chatreaction = {}
