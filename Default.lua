@@ -1,3 +1,5 @@
+defaultver = 'ver. 1.3.9.'
+
 text = {
     ["No waypoint has been set!"] = "No waypoint has been set!",
     ["Info copied"] = "Info copied",
@@ -321,6 +323,42 @@ text = {
     ["Bonus Room"] = "Bonus Room",
     ["Inside Vault"] = "Inside Vault",
     ["Outsite Vault"] = "Outsite Vault",
+    ["Weapons"] = "Weapons",
+    ["Add Weapon"] = "Add Weapon",
+    ["Remove Weapon"] = "Remove Weapon",
+    ["Components"] = "Components",
+    ["Add Component"] = "Add Component",
+    ["Remove Component"] = "Remove Component",
+    ["Give All Weapons"] = "Give All Weapons",
+    ["Remove All Weapons"] = "Remove All Weapons",
+    ["Give All Components"] = "Give All Components",
+    ["Loadouts"] = "Loadouts",
+    ["Save Loadout"] = "Save Loadout",
+    ["Open Loadouts"] = "Open Loadouts",
+    ["Load"] = "Load",
+    ["Play Animations"] = "Play Animations",
+    ["Play On All Peds"] = "Play On All Peds",
+    ["Animations"] = "Animations",
+    ["Options"] = "Options",
+    ["Stop Animation"] = "Stop Animation",
+    ["Blend-In Speed:"] = "Blend-In Speed:",
+    ["Blend-Out Speed:"] = "Blend-Out Speed:",
+    ["Duration (ms):"] = "Duration (ms):",
+    ["Playback Rate:"] = "Playback Rate:",
+    ["Anim Flags:"] = "Anim Flags:",
+    ["Loop"] = "Loop",
+    ["StopOnLastFrame"] = "Stop On Last Frame",
+    ["OnlyAnimateUpperBody"] = "Only Animate Upper Body",
+    ["AllowPlayerControl"] = "Allow Player Control",
+    ["Cancellable"] = "Cancellable",
+    ["Lock Position"] = "Lock Position",
+    ["All Anims"] = "All Anims",
+    ["[Search by Name]"] = "[Search by Name]",
+    ["[Search by Dictionary]"] = "[Search by Dictionary]",
+    ["Add To Favourites"] = "Add To Favourites",
+    ["Favourites"] = "Favourites",
+    ["Scenarios"] = "Scenarios",
+    ["Off Radar"] = "Off Radar",
 }
 
 table_settings = {
@@ -497,6 +535,7 @@ hornboost = {}
 show_invisible = {}
 earrape = {}
 weaporain = {}
+transerr = {}
 
 for i = 0, 31 do
  jetLester[i] = false
@@ -506,7 +545,8 @@ for i = 0, 31 do
  hornboost[i] = false
  show_invisible[i] = false
  earrape[i] = false
- weaporain[i] =false
+ weaporain[i] = false
+ transerr[i] = false
 end
 
 chatreaction = {}
@@ -515,7 +555,9 @@ for i = 1, 14 do
  chatreaction[i] = false
 end
 
-blackholeinf = {0,0,100,0.1,1,false,false}
+blackholeinf = {0, 0, 100, 0.1, 1, false, false}
+Animopt = {8.0, 8.0, -1, 0.0}
+Animflag = {0, 0, 0, 0, 0, false}
 
 topspeed = 0
 speed = 0

@@ -1,3 +1,5 @@
+assetver = 'ver. 1.3.9.'
+
 svoutfits = {
     name = {},
     mask = {},
@@ -102,8 +104,13 @@ first_message = nil
 second_message = nil
 keypress = nil
 selectedplayer = ''
-weapon_loadout = {}
-new_weapon_loadout = {}
+info_message = ''
+dc_invite = ''
+donate_link = ''
+vehicle_bl = {}
+vehicle_names = {}
+animationName = {}
+animationDict = {}
 var = {}
 txtvar = {}
 varmax = {}
@@ -122,6 +129,9 @@ lesterjet = {}
 results = {}
 infos = {}
 chatsongs = {}
+loadouts = {}
+CurrentLoadout = {}
+FavAnims = {}
 keycodes = {}
 
 keycodes[8] = "Back"
@@ -664,32 +674,21 @@ WeaponPickup = {
 }
 
 SpamBotRID = {
-    196341824,  151725375,  208809071,  190141576,  146431909,  109571091,  133028421,  196234534,  136393330,  195926566,
-    203326273,  166614412,  194138378,  203122036,  203625685,  208057343,  97919431,   187226256,  207544623,  195552617,
-    120873237,  203146613,  204042886,  197935347,  180695289,  191304427,  205350626,  192202204,  171768892,  196300203,
-    196226660,  195924847,  205349949,  204053106,  203147927,  194828358,  169211087,  126781188,  204803268,  203626074,
-    194426808,  39201192,   194828386,  194812543,  151595935,  194837686,  152833519,  147898689,  196223053,  184526056,
-    121103552,  203330325,  196200521,  203330201,  109027865,  204057797,  194813074,  183555930,  102209333,  82679831,
-    173571840,  194832243,  195924406,  138680490,  204809474,  174617167,  204043393,  197428558,  203326346,  204046500,
-    194811121,  191697873,  130564722,  150507171,  137645635,  112760042,  176896611,  92230184,   183556440,  186665499,
-    121104990,  114131992,  186825205,  203144915,  172410491,  145843113,  147992665,  205351437,  183556188,  155881373,
-    203127804,  177725534,  120889849,  85408317,   176728887,  203325981,  99949958,   194815360,  124995378,  194839651,
-    194839427,  204053894,  190005551,  205350878,  112620127,  135134862,  195251994,  169788370,  197939251,  15805471,
-    205350669,  205355033,  205349735,  203624097,  186838900,  190872878,  192336265,  150137126,  195710395,  186681044,
-    110215106,  141674360,  143910298,  156036674,  168591054,  148157214,  195591598,  205354173,  205365232,  170155078,
-    186748118,  191183703,  208053633,  114420173,  187226131,  114186267,  186636235,  204413688,  170779553,  10302880,
-    112227544,  121034683,  145818564,  203326394,  101456230,  185311643,  204062292,  205353930,  108730551,  169873020,
-    193512534,  171437772,  186216729,  205696290,  196431593,  139035573,  195202884,  146678221,  64774759,   90624650,
-    194831812,  203500098,  186874093,  111665175,  140347063,  197817364,  148050745,  205350585,  203224228,  205531950,
-    131212264,  205354404,  196196870,  140430261,  136008165,  146113094,  140474846,  205274061,  175563404,  142079741,
-    169421629,  194827164,  198057410,  173378351,  203144902,  98982339,   195323528,  200998134,  90601400,   184462903,
-    205357617,  205476556,  184547598,  109069240,  203626251,  104543227,  192343817,  198182198,  123995200,  146834020,
-    139569730,  187253129,  181716403,  186307570,  171769522,  203325700,  196432858,  184634544,  107398869,  47836643,
-    196138718,  186659961,  176340429,  147583600,  178307680,  145615965,  164838489,  176974373,  56976942,   189598028,
-    183556053,  196323939,  196232611,  205353352,  73370127,   103210165,  1235769,    203623850,  189100528,  120822874,
-    174155727,  194829459,  208787604,  205609380,  132858124,  194814600,  141747304,  198181233,  96205183,   194817833,
-    196226865,  194831732,  100519846,  205354891,  205356183,  194829325,  186885260,  198020165,  176835354,  179042912,
-    205350719,  196330318,  94669782,   149204426,  196484969,  137235771,  61141937,   143392552,
+    196341824,  151725375,  208809071,  190141576,  146431909,  109571091,  133028421,  196234534,  136393330,  195926566,  203326273,  166614412,  194138378,  203122036,  203625685,  208057343,  97919431,   187226256,  207544623,  195552617,
+    120873237,  203146613,  204042886,  197935347,  180695289,  191304427,  205350626,  192202204,  171768892,  196300203,  196226660,  195924847,  205349949,  204053106,  203147927,  194828358,  169211087,  126781188,  204803268,  203626074,
+    194426808,  39201192,   194828386,  194812543,  151595935,  194837686,  152833519,  147898689,  196223053,  184526056,  121103552,  203330325,  196200521,  203330201,  109027865,  204057797,  194813074,  183555930,  102209333,  82679831,
+    173571840,  194832243,  195924406,  138680490,  204809474,  174617167,  204043393,  197428558,  203326346,  204046500,  194811121,  191697873,  130564722,  150507171,  137645635,  112760042,  176896611,  92230184,   183556440,  186665499,
+    121104990,  114131992,  186825205,  203144915,  172410491,  145843113,  147992665,  205351437,  183556188,  155881373,  203127804,  177725534,  120889849,  85408317,   176728887,  203325981,  99949958,   194815360,  124995378,  194839651,
+    194839427,  204053894,  190005551,  205350878,  112620127,  135134862,  195251994,  169788370,  197939251,  15805471,   205350669,  205355033,  205349735,  203624097,  186838900,  190872878,  192336265,  150137126,  195710395,  186681044,
+    110215106,  141674360,  143910298,  156036674,  168591054,  148157214,  195591598,  205354173,  205365232,  170155078,  186748118,  191183703,  208053633,  114420173,  187226131,  114186267,  186636235,  204413688,  170779553,  10302880,
+    112227544,  121034683,  145818564,  203326394,  101456230,  185311643,  204062292,  205353930,  108730551,  169873020,  193512534,  171437772,  186216729,  205696290,  196431593,  139035573,  195202884,  146678221,  64774759,   90624650,
+    194831812,  203500098,  186874093,  111665175,  140347063,  197817364,  148050745,  205350585,  203224228,  205531950,  131212264,  205354404,  196196870,  140430261,  136008165,  146113094,  140474846,  205274061,  175563404,  142079741,
+    169421629,  194827164,  198057410,  173378351,  203144902,  98982339,   195323528,  200998134,  90601400,   184462903,  205357617,  205476556,  184547598,  109069240,  203626251,  104543227,  192343817,  198182198,  123995200,  146834020,
+    139569730,  187253129,  181716403,  186307570,  171769522,  203325700,  196432858,  184634544,  107398869,  47836643,   196138718,  186659961,  176340429,  147583600,  178307680,  145615965,  164838489,  176974373,  56976942,   189598028,
+    183556053,  196323939,  196232611,  205353352,  73370127,   103210165,  1235769,    203623850,  189100528,  120822874,  174155727,  194829459,  208787604,  205609380,  132858124,  194814600,  141747304,  198181233,  96205183,   194817833,
+    196226865,  194831732,  100519846,  205354891,  205356183,  194829325,  186885260,  198020165,  176835354,  179042912,  205350719,  196330318,  94669782,   149204426,  196484969,  137235771,  61141937,   143392552,  204810696,  204808335,
+    151481254,  196485192,  131421500,  170724660,  165287761,  175978532,  205702108,  194814222,  187818704,  183556564,  196574404,  209132553,  187355734,  205476120,  187227153,  146436721,  190843371,  204807070,  173566828,  196043857,
+    187226647,  201339988,  116257959,  89914597,   206540310,  204044988,  155159410,  205647794,  203500156,  190056589,  170272593,  186727010,  196234868,
 }
 
 weaphash = {
@@ -773,6 +772,116 @@ ghostrider_chains = {
     {-0.0999998376, 0.100000001, -0.0900002569, -9.99999905, -50.0299911, 0},
     {-0.0699571669, 0.130019873, -0.0500002541, -19.9999981, -54.9999962, 0},
     {38, 0.139999971, 0.0299999844, 0.139999986, 0, -29.9999962, 0},
+}
+
+premadeanims = {
+    {"Pole Dance", "mini@strip_club@pole_dance@pole_dance3", "pd_dance_03"},
+    {"Hood Dance", "missfbi3_sniping", "dance_m_default"},
+    {"Burning", "ragdoll@human", "on_fire"},
+    {"Getting Stunned", "ragdoll@human", "electrocute"},
+    {"Private Dance", "mini@strip_club@private_dance@part1", "priv_dance_p1"},
+    {"The Rear Abundance", "rcmpaparazzo_2", "shag_loop_poppy"},
+    {"The Invisible Man", "rcmpaparazzo_2", "shag_loop_a"},
+    {"Push ups", "amb@world_human_push_ups@male@base", "base"},
+    {"Sit ups", "amb@world_human_sit_ups@male@base", "base"},
+    {"Wave Yo' Arms", "random@car_thief@victimpoints_ig_3", "arms_waving"},
+    {"Give BJ to Driver", "mini@prostitutes@sexnorm_veh", "bj_loop_prostitute"},
+    {"Pleasure Driver", "mini@prostitutes@sexnorm_veh", "sex_loop_prostitute"},
+    {"Mime", "special_ped@mime@monologue_8@monologue_8a", "08_ig_1_wall_ba_0"},
+    {"Mime 2", "special_ped@mime@monologue_7@monologue_7a", "11_ig_1_run_aw_0"},
+    {"Throw", "switch@franklin@throw_cup", "throw_cup_loop"},
+    {"Smoke Coughing", "timetable@gardener@smoking_joint", "idle_cough"},
+    {"Chilling with Friends", "friends@laf@ig_1@base", "base"},
+    {"They Think We Dumb", "timetable@ron@they_think_were_stupid", "they_think_were_stupid"},
+    {"Come Here", "gestures@m@standing@fat", "gesture_come_here_hard"},
+    {"No Way", "gestures@m@standing@fat", "gesture_no_way"},
+    {"They're Gonna Kill Me", "random@bicycle_thief@ask_help", "my_dads_going_to_kill_me"},
+    {"You Gotta Help Me", "random@bicycle_thief@ask_help", "please_man_you_gotta_help_me"},
+    {"Sleep", "savecouch@", "t_sleep_loop_couch"},
+    {"Sleep 2", "savem_default@", "m_sleep_r_loop"},
+    {"Sleep 3", "timetable@tracy@sleep@", "idle_c"},
+    {"Meditate", "rcmcollect_paperleadinout@", "meditiate_idle"},
+    {"Fap", "switch@trevor@jerking_off", "trev_jerking_off_loop"},
+    {"Yeah Yeah Yeah", "special_ped@jessie@michael_1@michael_1b", "jessie_ig_2_yeahyeahyeah_1"},
+    {"Idle On Laptop", "switch@franklin@on_laptop", "001927_01_fras_v2_4_on_laptop_idle"},
+    {"Hands Up", "random@arrests", "idle_2_hands_up"},
+    {"Stand Still, Arms Spread", "mp_sleep", "bind_pose_180"},
+    {"Dog Sitting", "creatures@pug@amb@world_dog_sitting@base", "base"},
+    {"Amanda Pleasure", "timetable@amanda@ig_6", "ig_6_base"},
+    {"Toilet", "switch@trevor@on_toilet", "trev_on_toilet_loop"},
+    {"???", "anim@veh@armordillo@turret@base", "fire"},
+    {"T-pose", "mp_intro_concat-3", "mp_m_freemode_01_dual-3"},
+    {"Cow Grazing", "creatures@cow@amb@world_cow_grazing@base", "base"},
+    {"Deer Walk", "creatures@deer@move", "walk"},
+    {"Dolphin Dying", "creatures@dolphin@move", "dying"},
+    {"Retriever Attack" , "creatures@retriever@melee@streamed_core@", "attack"},
+}
+
+scenario = {
+    { "Drilling", "WORLD_HUMAN_CONST_DRILL" },
+    { "Hammering", "WORLD_HUMAN_HAMMERING" },
+    { "Mechanic", "WORLD_HUMAN_VEHICLE_MECHANIC" },
+    { "Janitor", "WORLD_HUMAN_JANITOR" },
+    { "Hang Out", "WORLD_HUMAN_HANG_OUT_STREET" },
+    { "Play Guitar", "WORLD_HUMAN_MUSICIAN_MALE_BONGOS" },
+    { "Play Bongos", "WORLD_HUMAN_MUSICIAN_MALE_GUITAR" },
+    { "Clipboard", "WORLD_HUMAN_CLIPBOARD" },
+    { "Smoking", "WORLD_HUMAN_SMOKING" },
+    { "Smoking 2", "WORLD_HUMAN_AA_SMOKE" },
+    { "Smoking Weed", "WORLD_HUMAN_SMOKING_POT" },
+    { "Standing With Phone", "WORLD_HUMAN_STAND_MOBILE" },
+    { "Standing With Phone 2", "WORLD_HUMAN_STAND_MOBILE_UPRIGHT" },
+    { "Standing Guard", "WORLD_HUMAN_GUARD_STAND" },
+    { "Standing Impatiently", "WORLD_HUMAN_STAND_IMPATIENT" },
+    { "Standing Impatiently 2", "WORLD_HUMAN_STAND_IMPATIENT_UPRIGHT" },
+    { "Soldier Stand", "WORLD_HUMAN_GUARD_STAND_ARMY" },
+    { "Hobo Stand", "WORLD_HUMAN_BUM_STANDING" },
+    { "Doing Pushups", "WORLD_HUMAN_PUSH_UPS" },
+    { "Lifting Weights", "WORLD_HUMAN_MUSCLE_FREE_WEIGHTS" },
+    { "Flexing", "WORLD_HUMAN_MUSCLE_FLEX" },
+    { "Drug Dealer", "WORLD_HUMAN_DRUG_DEALER_HARD" },
+    { "Hooker", "WORLD_HUMAN_PROSTITUTE_LOW_CLASS" },
+    { "Hooker 2", "WORLD_HUMAN_PROSTITUTE_HIGH_CLASS" },
+    { "Drunk", "WORLD_HUMAN_STUPOR" },
+    { "Drinking", "WORLD_HUMAN_DRINKING" },
+    { "Drinking Coffee", "WORLD_HUMAN_AA_COFFEE" },
+    { "Binoculars", "WORLD_HUMAN_BINOCULARS" },
+    { "Welding", "WORLD_HUMAN_WELDING" },
+    { "Shocked", "WORLD_HUMAN_MOBILE_FILM_SHOCKING" },
+    { "Taking Pictures", "WORLD_HUMAN_PAPARAZZI" },
+    { "Medic", "CODE_HUMAN_MEDIC_KNEEL" },
+    { "Window Shopping", "WORLD_HUMAN_WINDOW_SHOP_BROWSE" },
+    { "Cleaning", "WORLD_HUMAN_MAID_CLEAN" },
+    { "Doing Yoga", "WORLD_HUMAN_YOGA" },
+    { "Tourist Map", "WORLD_HUMAN_TOURIST_MAP" },
+    { "Tennis Player", "WORLD_HUMAN_TENNIS_PLAYER" },
+    { "Sunbathing", "WORLD_HUMAN_SUNBATHE" },
+    { "Sunbathing 2", "WORLD_HUMAN_SUNBATHE_BACK" },
+    { "Fishing", "WORLD_HUMAN_STAND_FISHING" },
+    { "Shining Torch", "WORLD_HUMAN_SECURITY_SHINE_TORCH" },
+    { "Picnic", "WORLD_HUMAN_PICNIC" },
+    { "Partying", "WORLD_HUMAN_PARTYING" },
+    { "Leaning", "WORLD_HUMAN_LEANING" },
+    { "Jog Standing", "WORLD_HUMAN_JOG_STANDING" },
+    { "Human Statue", "WORLD_HUMAN_HUMAN_STATUE" },
+    { "Hanging Out (Street)", "WORLD_HUMAN_HANG_OUT_STREET" },
+    { "Golf Player", "WORLD_HUMAN_GOLF_PLAYER" },
+    { "Gardening", "WORLD_HUMAN_GARDENER_PLANT" },
+    { "Drug Dealing", "WORLD_HUMAN_DRUG_DEALER_HARD" },
+    { "Cheering", "WORLD_HUMAN_CHEERING" },
+    { "Parking Attendant", "WORLD_HUMAN_CAR_PARK_ATTENDANT" },
+    { "Wash", "WORLD_HUMAN_BUM_WASH" },
+    { "Holding Sign", "WORLD_HUMAN_BUM_FREEWAY" },
+    { "Laying Down (Hobo)", "WORLD_HUMAN_BUM_SLUMPED" },
+    { "BBQ", "PROP_HUMAN_BBQ" },
+}
+
+anim_flag = {
+     Loop = 1 << 0,
+     StopOnLastFrame = 1 << 1,
+     OnlyAnimateUpperBody = 1 << 4,
+     AllowPlayerControl = 1 << 5,
+     Cancellable = 1 << 7,
 }
 
 casino_presets = {
@@ -872,123 +981,6 @@ CayoTeleports = {
         [text["Drainage Tunnel"]] = {x = 5044.129, y = -5815.370, z = -11.146, h = 36.639},
         [text["Compound Exit"]] = {x = 4990.689, y = -5718.354, z = 19.880, h = 51.015},
         [text["Ocean"]] = {x = 4242.359, y = -5718.519, z = 127.694, h = 99.835},
-    },
-}
-
-Weapons = {
-    Melee = {
-        {"Antique Cavalry Dagger", -1834847097},
-        {"Baseball Bat", -1786099057},
-        {"Broken Bottle", -102323637},
-        {"Crowbar", 2227010557},
-        {"Flashlight", -1951375401},
-        {"Golf Club", 1141786504},
-        {"Hammer", 1317494643},
-        {"Hatchet", -102973651},
-        {"Brass Knuckles", -656458692},
-        {"Knife", -1716189206},
-        {"Machete", -581044007},
-        {"Switchblade", -538741184},
-        {"Nightstick", 1737195953},
-        {"Pipe Wrench", 419712736},
-        {"Battle Axe", -853065399},
-        {"Pool Cue", -1810795771},
-        {"Stone Hatchet", 940833800},
-    },
-    Pistols = {
-        {"Pistol", 453432689},
-        {"Pistol Mk II", -1075685676},
-        {"Combat Pistol", 1593441988},
-        {"AP Pistol", 584646201},
-        {"Stun Gun", 911657153},
-        {"Pistol .50", -1716589765},
-        {"SNS Pistol", -1076751822},
-        {"SNS Pistol Mk II", -2009644972},
-        {"Heavy Pistol", -771403250},
-        {"Vintage Pistol", 137902532},
-        {"Flare Gun", 1198879012},
-        {"Marksman Pistol", -598887786},
-        {"Heavy Revolver", -1045183535},
-        {"Heavy Revolver Mk II", -879347409},
-        {"Double Action Revolver", -1746263880},
-        {"Up-n-Atomizer", -1355376991},
-        {"Ceramic Pistol", 727643628},
-        {"Navy Revolver", -1853920116},
-        {"Stun Gun(New)", 1171102963},
-        {"Perico Pistol", 1470379660},
-    },
-    SMGs = {
-        {"Micro SMG", 324215364},
-        {"SMG", 736523883},
-        {"SMG Mk II", 2024373456},
-        {"Assault SMG", -270015777},
-        {"Combat PDW", 171789620},
-        {"Machine Pistol", -619010992},
-        {"Mini SMG", -1121678507},
-        {"Unholy Hellbringer", 1198256469},
-        {"MG", -1660422300},
-        {"Combat MG", 2144741730},
-        {"Combat MG Mk II", -608341376},
-        {"Gusenberg Sweeper", 1627465347},
-    },
-    Rifles = {
-        {"Assault Rifle", -1074790547},
-        {"Assault Rifle Mk II", 961495388},
-        {"Carbine Rifle", -2084633992},
-        {"Carbine Rifle Mk II", -86904375},
-        {"Advanced Rifle", -1357824103},
-        {"Special Carbine", -1063057011},
-        {"Special Carbine Mk II", -1768145561},
-        {"Bullpup Rifle", 2132975508},
-        {"Bullpup Rifle Mk II", -2066285827},
-        {"Compact Rifle", 1649403952},
-        {"Military Rifle", 2636060646},
-        {"Heavy Rifle", 3347935668},
-    },
-    Snipers = {
-        {"Sniper Rifle", 100416529},
-        {"Heavy Sniper", 205991906},
-        {"Heavy Sniper Mk II", 177293209},
-        {"Marksman Rifle", -952879014},
-        {"Marksman Rifle Mk II", 1785463520},
-    },
-    Shotguns = {
-        {"Pump Shotgun", 487013001},
-        {"Pump Shotgun Mk II", 1432025498},
-        {"Sawed-Off Shotgun", 2017895192},
-        {"Assault Shotgun", -494615257},
-        {"Bullpup Shotgun", -1654528753},
-        {"Musket", -1466123874},
-        {"Heavy Shotgun", 984333226},
-        {"Double Barrel Shotgun", -275439685},
-        {"Sweeper Shotgun", 317205821},
-        {"Combat Shotgun", 94989220},
-    },
-    Heavy = {
-        {"RPG", -1312131151},
-        {"Grenade Launcher", -1568386805},
-        {"Minigun", 1119849093},
-        {"Firework Launcher", 2138347493},
-        {"Railgun", 1834241177},
-        {"Homing Launcher", 1672152130},
-        {"Compact Grenade", 125959754},
-        {"Widowmaker", -1238556825},
-        {"Compact EMP Launcher", 3676729658},
-    },
-    Throwables = {
-        {"Grenade", -1813897027},
-        {"BZ Gas", -1600701090},
-        {"Molotov Cocktail", 615608432},
-        {"Proximity Mines", -1420407917},
-        {"Snowballs", 126349499},
-        {"Pipe Bombs", -1169823560},
-        {"Baseball", 600439132},
-        {"Tear Gas", -37975472},
-        {"Flare", 1233104067},
-        {"Sticky Bomb", 741814745},
-        {"Jerry Can", 883325847},
-        {"Fire Extinguisher", 101631238},
-        {"Hazardous Jerry Can", -1168940174},
     },
 }
 
