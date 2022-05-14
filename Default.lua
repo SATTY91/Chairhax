@@ -1,4 +1,4 @@
-defaultver = 'ver. 1.3.9.'
+defaultver = 'ver. 1.3.10.'
 
 text = {
     ["No waypoint has been set!"] = "No waypoint has been set!",
@@ -56,7 +56,7 @@ text = {
     ["Vehicles"] = "Vehicles",
     ["Ojects"] = "Ojects",
     ["Peds"] = "Peds",
-    ["Block Features"] = "Block Features",
+    ["Block Areas"] = "Block Areas",
     ["Block Orbital Room"] = "Block Orbital Room",
     ["Block All LSC"] = "Block All LSC",
     ["Block All Ammu-Nation"] = "Block All Ammu-Nation",
@@ -362,20 +362,20 @@ text = {
 }
 
 table_settings = {
---[[1]] {"exclude_friends", true, text["Exclude Friends"]},
---[[2]] {"prot_transaction_error", true, text["Block Transaction Error"]},
---[[3]] {"welcome_screen", true, text["Show Welcome Screen"]},
---[[4]] {"sound_effects", true, text["Sound Effects"]},
---[[5]] {"godmode_attackers", true, text["Godmode Attackers"]},
---[[6]] {"check_for_updates", true, text["Check For Updates"]},
---[[7]] {"auto_update", true, text["Auto Update"]},
---[[8]] {"show_hotkeys", true, text["Show Hotkeys"]},
---[[9]] {"auto_load", false, text["Auto Load Lua (form Autoload | Max 1!)"]},
---[[10]]{"noclip_weaons", true, text["Allow Weapons While No Clip"]},
---[[11]]{"show_host", true, text["Show Host"]},
---[[12]]{"show_modder_count", true, text["Show Modder Count"]},
---[[13]]{"show_script_host", true, text["Show Script Host"]},
---[[14]]{"show_friend_count", true, text["Show Friend Count"]},
+--[[1]] {"exclude_friends", true, "Exclude Friends"},
+--[[2]] {"prot_transaction_error", true, "Block Transaction Error"},
+--[[3]] {"welcome_screen", true, "Show Welcome Screen"},
+--[[4]] {"sound_effects", true, "Sound Effects"},
+--[[5]] {"godmode_attackers", true, "Godmode Attackers"},
+--[[6]] {"check_for_updates", true, "Check For Updates"},
+--[[7]] {"auto_update", true, "Auto Update"},
+--[[8]] {"show_hotkeys", true, "Show Hotkeys"},
+--[[9]] {"auto_load", false, "Auto Load Lua (form Autoload | Max 1!)"},
+--[[10]]{"noclip_weaons", true, "Allow Weapons While No Clip"},
+--[[11]]{"show_host", true, "Show Host"},
+--[[12]]{"show_modder_count", true, "Show Modder Count"},
+--[[13]]{"show_script_host", true, "Show Script Host"},
+--[[14]]{"show_friend_count", true, "Show Friend Count"},
 }
 
 rickroll = [[
@@ -568,7 +568,7 @@ deaths = 0
 bounty = 10000
 value = 100
 timer = 5
-female = -1667301416
+female = 2627665880
 male = 1885233650
 multiplier = 1
 acceleration = 0

@@ -1,4 +1,4 @@
-Weapons = {
+local Weapons = {
     Melee = {
         ["Antique Cavalry Dagger"] = {
             ["Hash"] = -1834847097,

@@ -1,4 +1,4 @@
-Proplist = {
+local Proplist = {
 	{"02gate3_l",3027077612},
 	{"apa_heist_apart2_door",1042741067},
 	{"apa_mp_apa_crashed_usaf_01a",1925170211},
